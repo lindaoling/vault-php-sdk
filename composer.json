@@ -1,6 +1,6 @@
 {
   "name": "dylanlim/vault-php-sdk",
-  "description": "Framework-independent PHP SDK for HashiCorp Vault and OpenBao-compatible APIs",
+  "description": "Framework-independent PHP SDK for Vault-compatible APIs",
   "type": "library",
   "license": "MIT",
   "require": {
@@ -15,12 +15,12 @@
   },
   "autoload": {
     "psr-4": {
-      "OpenBao\\": "src/"
+      "Vault\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "OpenBao\\Tests\\": "tests/"
+      "Vault\\Tests\\": "tests/"
     }
   },
   "scripts": {

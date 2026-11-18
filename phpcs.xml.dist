@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="Vault PHP SDK">
+    <description>PSR-12 coding standard for the SDK and its tests.</description>
+
+    <rule ref="PSR12" />
+
+    <file>src</file>
+    <file>tests</file>
+</ruleset>
