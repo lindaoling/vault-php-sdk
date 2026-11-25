@@ -38,7 +38,7 @@ PHP 7 can use the `1.x-dev` branch.
 composer require latch/vault-php-sdk
 ```
 
-For PHP 7:
+For legacy PHP 7 projects, install the old `1.x-dev` branch explicitly:
 
 ```bash
 composer require latch/vault-php-sdk:"1.x-dev"
@@ -215,11 +215,13 @@ URL, headers, optional JSON body, and timeout/TLS options, and must return an
 
 ## Compatibility and support
 
-The default branch targets PHP 8.0+. PHP 7.2+ projects should install the
-`1.x-dev` branch. Neither branch uses framework-specific dependencies. The API
-follows Vault's `/v1/` HTTP conventions and is compatible with Vault servers
-exposing those endpoints. Server-side policy and engine configuration remain
-the responsibility of the application.
+The default branch, `main`, targets PHP 8.0+ and uses
+`psr/simple-cache` 3.x. It cannot be installed on PHP 7. Existing PHP 7.2+
+projects must explicitly install the legacy `1.x-dev` branch. Neither branch
+uses framework-specific dependencies. The API follows Vault's `/v1/` HTTP
+conventions and is compatible with Vault servers exposing those endpoints.
+Server-side policy and engine configuration remain the responsibility of the
+application.
 
 ## License
 

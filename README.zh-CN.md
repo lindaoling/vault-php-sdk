@@ -35,7 +35,7 @@ PHP 公共命名空间为 `Vault\`，Composer 包名为 `latch/vault-php-sdk`。
 composer require latch/vault-php-sdk
 ```
 
-PHP 7 项目：
+旧版 PHP 7 项目需显式安装 `1.x-dev` 分支：
 
 ```bash
 composer require latch/vault-php-sdk:"1.x-dev"
@@ -205,8 +205,9 @@ $transport)` 的第二个参数传入。传输层会收到 HTTP 方法、完整 
 
 ## 兼容性
 
-默认分支支持 PHP 8.0+，PHP 7.2+ 项目请安装 `1.x-dev` 分支。两份分支均
-不绑定具体框架，遵循 Vault `/v1/` HTTP 约定，也兼容提供这些接口的 Vault
+默认分支 `main` 支持 PHP 8.0+，使用 `psr/simple-cache` 3.x，无法安装到
+PHP 7。原有的 PHP 7.2+ 项目需显式安装旧版 `1.x-dev` 分支。两份分支均不
+绑定具体框架，遵循 Vault `/v1/` HTTP 约定，也兼容提供这些接口的 Vault
 服务。服务端策略和 secrets engine 配置由业务应用负责。
 
 ## 许可证
