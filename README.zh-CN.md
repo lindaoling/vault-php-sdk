@@ -10,7 +10,7 @@ PHP 公共命名空间为 `Vault\`，Composer 包名为 `latch/vault-php-sdk`。
 
 ## 特性
 
-- 支持 PHP 7.2+，不依赖 Laravel、Symfony、ThinkPHP、Guzzle 或容器
+- 默认分支支持 PHP 8.0+，不依赖 Laravel、Symfony、ThinkPHP、Guzzle 或容器
 - Token 和 AppRole 认证
 - KV v1、KV v2 读写、版本管理和 metadata 操作
 - Token 生命周期、健康检查和挂载点接口
@@ -21,16 +21,28 @@ PHP 公共命名空间为 `Vault\`，Composer 包名为 `latch/vault-php-sdk`。
 
 ## 环境要求
 
-- PHP 7.2 或更高版本
+- PHP 8.0 或更高版本
 - `ext-curl`
 - `ext-json`
 - 可访问的 Vault 兼容服务
+
+默认分支支持 PHP 8.0 及以上版本。仍使用 PHP 7 的项目请安装 `1.x-dev`
+分支。
 
 ## 安装
 
 ```bash
 composer require latch/vault-php-sdk
 ```
+
+PHP 7 项目：
+
+```bash
+composer require latch/vault-php-sdk:"1.x-dev"
+```
+
+`1.x-dev` 分支支持 PHP 7.2+，使用 `psr/simple-cache` 1.x。默认分支使用
+`psr/simple-cache` 3.x，要求 PHP 8.0+。
 
 本地开发：
 
@@ -193,8 +205,9 @@ $transport)` 的第二个参数传入。传输层会收到 HTTP 方法、完整 
 
 ## 兼容性
 
-本包支持 PHP 7.2+，不绑定任何框架，遵循 Vault `/v1/` HTTP 约定，也兼容
-提供这些接口的 Vault 服务。服务端策略和 secrets engine 配置由业务应用负责。
+默认分支支持 PHP 8.0+，PHP 7.2+ 项目请安装 `1.x-dev` 分支。两份分支均
+不绑定具体框架，遵循 Vault `/v1/` HTTP 约定，也兼容提供这些接口的 Vault
+服务。服务端策略和 secrets engine 配置由业务应用负责。
 
 ## 许可证
 

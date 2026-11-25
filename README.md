@@ -12,7 +12,8 @@ The public PHP namespace is `Vault\`, and the Composer package name is
 
 ## Highlights
 
-- PHP 7.2 and later; no framework, Guzzle, or PSR container dependency
+- PHP 8.0+ on the default branch; no framework, Guzzle, or PSR container
+  dependency
 - Token and AppRole authentication
 - KV v1 and KV v2 secret operations
 - Token lifecycle, health, and mount APIs
@@ -23,16 +24,28 @@ The public PHP namespace is `Vault\`, and the Composer package name is
 
 ## Requirements
 
-- PHP 7.2+
+- PHP 8.0+
 - `ext-curl`
 - `ext-json`
 - A reachable Vault-compatible server
+
+The default branch supports PHP 8.0 and later. Projects that must stay on
+PHP 7 can use the `1.x-dev` branch.
 
 ## Installation
 
 ```bash
 composer require latch/vault-php-sdk
 ```
+
+For PHP 7:
+
+```bash
+composer require latch/vault-php-sdk:"1.x-dev"
+```
+
+The `1.x-dev` branch supports PHP 7.2+ and uses `psr/simple-cache` 1.x. The
+default branch uses `psr/simple-cache` 3.x and requires PHP 8.0+.
 
 For local development:
 
@@ -202,10 +215,11 @@ URL, headers, optional JSON body, and timeout/TLS options, and must return an
 
 ## Compatibility and support
 
-The package targets PHP 7.2+ and avoids framework-specific dependencies. The
-API follows Vault's `/v1/` HTTP conventions and is compatible with Vault
-servers exposing those endpoints. Server-side policy and engine configuration
-remain the responsibility of the application.
+The default branch targets PHP 8.0+. PHP 7.2+ projects should install the
+`1.x-dev` branch. Neither branch uses framework-specific dependencies. The API
+follows Vault's `/v1/` HTTP conventions and is compatible with Vault servers
+exposing those endpoints. Server-side policy and engine configuration remain
+the responsibility of the application.
 
 ## License
 
