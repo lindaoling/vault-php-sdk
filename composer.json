@@ -1,5 +1,5 @@
 {
-  "name": "dylanlim/vault-php-sdk",
+  "name": "latch/vault-php-sdk",
   "description": "Framework-independent PHP SDK for Vault-compatible APIs",
   "type": "library",
   "license": "MIT",
