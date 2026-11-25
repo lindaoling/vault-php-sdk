@@ -2,11 +2,11 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-`dylanlim/vault-php-sdk` 是一个通用、无框架依赖的 PHP Vault 兼容 API
+`latch/vault-php-sdk` 是一个通用、无框架依赖的 PHP Vault 兼容 API
 客户端，支持 `/v1/` 接口。默认使用 PHP cURL 发起请求，同时支持注入自定义
 传输层，便于接入现有框架、代理和测试替身。
 
-PHP 公共命名空间为 `Vault\`，Composer 包名为 `dylanlim/vault-php-sdk`。
+PHP 公共命名空间为 `Vault\`，Composer 包名为 `latch/vault-php-sdk`。
 
 ## 特性
 
@@ -29,7 +29,7 @@ PHP 公共命名空间为 `Vault\`，Composer 包名为 `dylanlim/vault-php-sdk`
 ## 安装
 
 ```bash
-composer require dylanlim/vault-php-sdk
+composer require latch/vault-php-sdk
 ```
 
 本地开发：

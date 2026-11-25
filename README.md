@@ -2,13 +2,13 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-`dylanlim/vault-php-sdk` is a small, framework-independent PHP client for
+`latch/vault-php-sdk` is a small, framework-independent PHP client for
 Vault-compatible HTTP APIs (`/v1/`). The SDK uses PHP cURL by default, but
 accepts an injected transport for framework integrations and deterministic
 tests.
 
 The public PHP namespace is `Vault\`, and the Composer package name is
-`dylanlim/vault-php-sdk`.
+`latch/vault-php-sdk`.
 
 ## Highlights
 
@@ -31,7 +31,7 @@ The public PHP namespace is `Vault\`, and the Composer package name is
 ## Installation
 
 ```bash
-composer require dylanlim/vault-php-sdk
+composer require latch/vault-php-sdk
 ```
 
 For local development:
